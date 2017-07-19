@@ -6,6 +6,21 @@ On Some models once the pin has been brute forced it will enable telent and logi
 
 I dont have a list of models this supports but aslong as the web interface is open you should be able to type 
 
+it wont test for
+```
+0
+00
+000
+0000
+00000
+000000
+0000000
+00000000
+000000000
+0000000000
+
+```
+
 
 Originally by Dominic Chell <dominic [at] mdsec.co.uk> 
 --------
