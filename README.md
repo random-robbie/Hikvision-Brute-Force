@@ -58,5 +58,3 @@ Example
 
 Shodan Search: HTTP/1.0 302 Redirect Server: DVRDVS-Webs
 
-To Do:
-During detection of new and old if default pin is set it simply returns it
