@@ -1,13 +1,17 @@
 # Hikvision-Brute-Force
 Brute Force Hikvision Devices that only allow PIN passwords
 
+On Some models once the pin has been brute forced it will enable telent and login to the system.
+
+
+I dont have a list of models this supports but aslong as the web interface is open you should be able to type 
+
 
 Originally by Dominic Chell <dominic [at] mdsec.co.uk> 
 --------
 Updated By Random_Robbie @random_robbie
 
 
-I dont have a list of models this supports but aslong as the web interface is open you should be able to type 
 
 
 Requirments
